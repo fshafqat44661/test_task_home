@@ -1,0 +1,209 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1f2937;
+  background: #f3f4f6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 0.65rem 1rem;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+button.danger {
+  background: #dc2626;
+}
+
+input,
+select {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  background: white;
+}
+
+.app-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 3rem;
+}
+
+.page-header,
+.section-header,
+.modal-header,
+.task-main {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.page-header h1,
+.section-header h2,
+.create-form h2,
+.modal h2,
+.task-item h3 {
+  margin: 0;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.error.banner {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.create-form,
+.task-section {
+  margin-top: 1.5rem;
+}
+
+.form-row,
+.task-actions,
+.action-group,
+.secondary-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.form-row input {
+  flex: 1;
+  min-width: 220px;
+}
+
+.task-grid {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.task-item {
+  display: grid;
+  gap: 1rem;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.status-to_do {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-in_progress {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status-done {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.empty-state {
+  text-align: center;
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 24, 39, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal {
+  width: min(640px, 100%);
+  max-height: 80vh;
+  overflow: auto;
+}
+
+.audit-list {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.audit-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+
+.audit-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .page-header,
+  .task-main,
+  .audit-meta {
+    flex-direction: column;
+  }
+}
